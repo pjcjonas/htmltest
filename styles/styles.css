@@ -320,7 +320,7 @@ body div.container section#faq .asnwer p {
   font-size: 14px;
   padding-bottom: 20px;
 }
-body div.container section#faq .asnwer.hideContent {
+body div.container section#faq .asnwer.hide-content {
   display: none;
   opacity: 0;
   animation-name: hideAnswer;
@@ -346,6 +346,12 @@ body div.container section#faq .faq-content-holder header i.faq-icon {
   display: block;
   background-size: contain;
   float: right;
+  background-repeat: no-repeat;
+}
+body div.container section#faq .faq-content-holder header i.faq-icon.close-icon {
+  background-image: url(../images/subtract-ico.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 body div.container section#faq .faq-content-holder.last-question {
   border-bottom: 1px solid #DCE8FE;

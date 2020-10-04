@@ -12,7 +12,8 @@ var initAccordianEvents = function() {
         iterator.addEventListener("click", (event) => {
             if (event?.target?.dataset?.id) {
                 var selectedAnswer = event.target.dataset.id;
-                document.getElementById(selectedAnswer).classList.toggle('hideContent');
+                document.getElementById(selectedAnswer).classList.toggle('hide-content');
+                document.getElementById("toggle-" + selectedAnswer).classList.toggle('close-icon');
             }
         });
     }
