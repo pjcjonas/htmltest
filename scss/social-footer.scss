@@ -1,0 +1,27 @@
+footer{
+    margin-top: 70px;
+    h3{
+        @include h3_navy();
+    }
+    section#footer-images {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .social-image{
+            box-sizing: border-box;
+            padding: 10px;
+
+            &:last-child {
+                padding-right: none;
+            }
+
+            &:first-child {
+                padding-left: none;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

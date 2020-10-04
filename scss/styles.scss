@@ -1,0 +1,135 @@
+@import 'reset.scss';
+@import 'variables.scss';
+@import '../fonts/stylesheet.css';
+
+body{ 
+    font-family: $font-family;
+
+    ul {
+        list-style: none;
+        li{
+            padding:0;
+            margin:0;
+        }
+    }
+
+    // Initial States
+    div.container{
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        // Global pill button setting
+        .pill-button {
+            @include pill_button();
+            display: block;
+        }
+
+        // Nav defaults
+        header{
+            box-sizing: border-box;
+
+            // Initial Nav states
+            nav{
+                box-sizing: border-box;
+                display: block;
+                position: relative;
+                
+                background-color: $color-purple;
+                @import 'nav.scss';
+            }
+        }
+
+        @import 'featured-image-mobile.scss';
+        @import 'articles-mobile.scss';
+        @import 'faq-accordian.scss';
+        @import 'social-footer.scss';
+        // Desktop Overide Styles
+        // ----------------------------------
+        @media (min-width: $breakpoint-desktop) {
+            max-width: 960px;
+
+            // Hide all mobile items
+            .mobile { display:none }
+
+            // Feature image
+            @import 'featured-image.scss';
+            
+            // Feature image
+            section#feature{
+                height: 470px;
+                background-image: url(../images/feature-desktop.jpg);
+            }
+
+            // Use high resolution image on highres displays with double pixel ratio
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+                section#feature {
+                    background-image: url(../images/feature-desktop-x2.jpg);
+                }
+            }
+
+            // Navigation - Desktop
+            header {
+                nav {
+                    flex-wrap: nowrap;
+                    display: flex;
+                    justify-content: space-between;
+
+                    // Initial Desktop Logo
+                    .logo {
+                        width: 100%;
+                        max-width: 170px;
+                        padding: 10px 0 10px 50px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    @import 'nav-desktop.scss';
+                }
+            }
+
+            @import 'articles-desktop.scss';
+
+            section#faq{
+                margin-top: 0px;
+            }
+
+            footer{
+                section#footer-images {
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+
+        // Mobile Overide Styles
+        // ----------------------------------
+        @media (max-width: $breakpoint-mobile) {
+            
+            .desktop{
+                display: none
+            }
+
+            // Feature image
+            section#feature{
+                background-image: url(../images/feature-mobile.jpg);
+            }
+
+            // Navigation - Mobile
+            header{
+                nav {
+                    .logo {
+                        width: 100%;
+                        max-width: 200px;
+                        padding: 10px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    @import 'nav-mobile.scss';
+                }
+            }
+        }
+    }
+}

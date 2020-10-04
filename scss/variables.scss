@@ -1,0 +1,68 @@
+// Break points
+$breakpoint-desktop: 781px;
+$breakpoint-mobile: 780px;
+
+// Colors
+$color-purple: #4587FF;
+$color-light-purple: #DCE8FE;
+$color-navy: #00225C;
+$color-peach: #FF6752;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-dark-grey: #525252;
+$color-faded-black:  rgba(0,0,0,0.3);
+
+// Fonts
+$fonts-weight-bold: 900;
+$fonts-size-text: 12px;
+$fonts-size-text-medium: 14px;
+$fonts-size-mobile-nav: 18px;
+$fonts-size-feature-paragraph: 18px;
+$fonts-size-feature-heading-size: 28px;
+$fonts-size-heading3-size: 24px;
+$line-height: 20px;
+
+$font-family: 'Open Sans';
+
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 600;
+$font-bold: 900;
+
+
+@mixin pill_button() {
+    border-radius: 50px;
+    text-align: center;
+    height: 40px;
+    line-height: 39px;
+    text-decoration: none;
+    font-size: $fonts-size-text-medium;
+   
+    &:hover {
+        font-weight: $font-bold;
+    }
+
+    &.peach{
+        background-color: $color-purple;
+    }
+
+    &.peach:hover{
+        background-color: $color-peach;
+    }
+
+    &.navy{
+        background-color: $color-navy;
+    }
+
+    &.navy:hover{
+        background-color: $color-peach;
+    }
+}
+
+@mixin h3_navy() {
+    font-size: $fonts-size-feature-heading-size;
+    color: $color-navy;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}

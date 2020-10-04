@@ -1,0 +1,58 @@
+section#feature{
+    width: 100%;
+    height: 560px;
+    background-position: 50% 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+
+    .feature-content{
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        padding:40px;
+        box-sizing: border-box;
+        
+        h1{
+            font-size: $fonts-size-feature-heading-size;
+            color: $color-white;
+            box-sizing: border-box;
+        }
+
+        p {
+            font-size: $fonts-size-feature-paragraph;
+            color: $color-white;
+            box-sizing: border-box;
+            margin-top: 20px;
+            line-height: 25px;
+            font-weight: $font-light;
+        }
+
+        a{
+            @include pill_button();
+            display: block;
+            text-align: center;
+            padding: 0px;
+            height: fit-content;
+            width: 250px;
+            color:$color-white;
+            background-color: $color-peach;
+            margin-top: 30px;
+        }
+        
+    }
+
+}
+
+section#feature:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: $color-faded-black;
+    height: 100%;
+}

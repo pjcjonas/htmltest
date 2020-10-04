@@ -1,0 +1,44 @@
+section#about {
+    article {
+        padding: 40px 30px;
+        margin-top: 70px;
+        width: 100%;
+        box-sizing: border-box;
+        .article-content{
+            h3, p, li{
+                color: $color-white;
+            }
+
+            p{
+                margin: 22px 0;
+            }
+
+            li, p{
+                font-weight: $font-light;
+                font-size: $fonts-size-text-medium;
+                line-height: $line-height; 
+            }
+
+            h3{
+                font-size: $fonts-size-heading3-size;
+            }
+        }
+        
+        a{
+            margin-top: 22px;
+            color: $color-white;
+        }
+    }
+
+    article:nth-child(2){
+        margin-left: 0;
+    }
+
+    article#our-business {
+        background-color: $color-navy;
+    }
+
+    article#meet-the-team {
+        background-color: $color-purple;
+    }
+}

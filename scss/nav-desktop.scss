@@ -1,0 +1,29 @@
+ul.nav-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 470px;
+    margin-right: 50px;
+
+    li{
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+
+    li.contact-highlight {
+        width: 130px;
+        a{
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+            text-align: center;
+            height: 30px;
+            align-items: center;
+        }
+    }
+}

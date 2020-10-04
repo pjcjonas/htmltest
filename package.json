@@ -1,0 +1,7 @@
+{
+  "name": "fridaytest",
+  "version": "1.0.0",
+  "scripts": {
+    "watch":"sass --watch scss/styles.scss styles/styles.css"
+  }
+}

@@ -1,0 +1,29 @@
+.mobile-hamburger {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+
+ul.nav-buttons {
+    li{
+        a{
+            color: $color-white;
+            font-size: $fonts-size-text;
+            text-decoration: none;
+        }
+
+        a:hover{
+            font-weight: $fonts-weight-bold;
+        }
+    }
+
+    li.contact-highlight {
+        a{
+            background-color: $color-navy;
+        }
+
+        a:hover {
+            background-color: $color-peach;
+        }
+    }
+}
